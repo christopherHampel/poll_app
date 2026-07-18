@@ -1,0 +1,5 @@
+@use '../../styles/abstracts/index' as abs;
+
+main {
+    background-color: abs.$primary_purple;
+}
