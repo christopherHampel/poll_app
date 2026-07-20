@@ -1,0 +1,11 @@
+@use './colors' as colors;
+
+h1 {
+  font-family: 'Nerko One';
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 89px;
+  color: colors.$primary_orange;
+}
+
+

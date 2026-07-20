@@ -1,4 +1,15 @@
+@use './styles/abstracts/index' as abs;
+
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: abs.$primary_purple;
+}
+
+.max-width {
+  max-width: 1440px;
+  margin: auto;
 }

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Button } from "../../shared/components/button/button";
 
 @Component({
   selector: 'app-introduction',
-  imports: [],
+  imports: [Button],
   templateUrl: './introduction.html',
   styleUrl: './introduction.scss',
 })

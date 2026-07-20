@@ -1,5 +1,19 @@
 @use '../../../styles/abstracts/index' as abs;
 
 main {
-    @include abs.displayFlex();
+  @include abs.displayFlex($direction: column);
+  padding: 39px 111px;
+
+  nav {
+    width: 100%;
+    @include abs.displayFlex($justify: flex-start);
+  }
+
+  section {
+    @include abs.displayFlex($gap: 32px);
+
+    p {
+      @include abs.fontDesigner($size: 24px, $weight: 600);
+    }
+  }
 }

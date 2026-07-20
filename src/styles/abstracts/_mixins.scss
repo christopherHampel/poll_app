@@ -1,6 +1,15 @@
-@mixin displayFlex($justify: center, $align: center, $gap: 0) {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    gap: $gap;
+@mixin displayFlex($direction: row, $justify: center, $align: center, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin fontDesigner($family: 'Mulish', $size: 16px, $weight: 400, $height: 100%, $color: #ffff) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
 }
