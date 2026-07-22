@@ -1,0 +1,7 @@
+@use '../../../styles/abstracts/index' as abs;
+
+main {
+  section {
+    @include abs.displayFlex($direction: column, $gap: 80px );
+  }
+}

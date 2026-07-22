@@ -1,0 +1,9 @@
+@use '../../../../styles/abstracts/index' as abs;
+
+main {
+    @include abs.displayFlex($justify: flex-start);
+    width: 100%;
+    p {
+        @include abs.fontDesigner($size: 32px, $weight: 500, $height: 100%);
+    }
+}
