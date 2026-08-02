@@ -11,9 +11,43 @@ main {
     .ending-soon-surveys {
       width: 321px;
       height: 310px;
+      padding: 40px 18px;
       border-top-right-radius: 80px;
       background-color: abs.$bg_card;
-      @include abs.displayFlex($direction: column);
+      @include abs.displayFlex($direction: column, $align: flex-start, $justify: space-between);
+
+      div {
+        @include abs.displayFlex($direction: column, $align: flex-start, $gap: 8px);
+
+        span {
+          @include abs.fontDesigner(
+            $size: 14px,
+            $weight: 600,
+            $color: abs.$primary_purple
+          );
+        }
+
+        strong {
+          @include abs.fontDesigner(
+            $size: 26px,
+            $weight: 700,
+            $color: abs.$primary_purple
+          );
+        }
+      }
+      aside {
+        padding: 3px 6px;
+        background-color: abs.$secondary_orange;
+        border-top-right-radius: 14px;
+
+        time {
+          @include abs.fontDesigner(
+            $size: 12px,
+            $weight: 500,
+            $color: abs.$primary_purple
+          );
+        }
+      }
     }
   }
 }

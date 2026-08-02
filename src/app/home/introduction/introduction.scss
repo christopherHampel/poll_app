@@ -12,6 +12,10 @@ main {
   section {
     @include abs.displayFlex($gap: 32px);
 
+    aside {
+      @include abs.displayFlex($direction: column, $align: flex-start, $gap: 32px);
+    }
+
     p {
       @include abs.fontDesigner($size: 24px, $weight: 600);
     }
