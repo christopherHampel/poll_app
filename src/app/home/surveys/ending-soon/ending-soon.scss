@@ -1,9 +1,19 @@
 @use '../../../../styles/abstracts/index' as abs;
 
 main {
-    @include abs.displayFlex($justify: flex-start);
-    width: 100%;
-    p {
-        @include abs.fontDesigner($size: 32px, $weight: 500, $height: 100%);
+  @include abs.displayFlex($direction: column, $align: flex-start, $gap: 32px);
+  p {
+    @include abs.fontDesigner($size: 32px, $weight: 500, $height: 100%);
+  }
+
+  section {
+    @include abs.displayFlex($gap: 32px);
+    .ending-soon-surveys {
+      width: 321px;
+      height: 310px;
+      border-top-right-radius: 80px;
+      background-color: abs.$bg_card;
+      @include abs.displayFlex($direction: column);
     }
+  }
 }

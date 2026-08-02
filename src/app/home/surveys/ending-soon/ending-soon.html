@@ -1,3 +1,12 @@
 <main>
-    <p>Ending soon surveys</p>
+  <p>Ending soon surveys</p>
+  <section>
+    @for (item of [].constructor(3); track $index) {
+      <article class="ending-soon-surveys">
+        <span>Team activities</span>
+        <strong>Let's Plan the Next team event together</strong>
+        <time>End in 1 day</time>
+      </article>
+    }
+  </section>
 </main>

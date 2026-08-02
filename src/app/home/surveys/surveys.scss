@@ -2,6 +2,6 @@
 
 main {
   section {
-    @include abs.displayFlex($direction: column, $gap: 80px );
+    @include abs.displayFlex($direction: column, $gap: 80px);
   }
 }
