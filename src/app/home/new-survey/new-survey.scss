@@ -1,0 +1,30 @@
+@use './../../../styles/abstracts/index' as abs;
+
+main {
+  height: 100vh;
+  @include abs.displayFlex();
+}
+
+.new-survey {
+  &__card {
+    width: 1166px;
+    background-color: abs.$primary_purple;
+    border-radius: 5px 100px 5px 5px;
+    padding: 40px 54px;
+
+    &-header {
+      @include abs.displayFlex($direction: column, $align: flex-start);
+
+      &-status {
+        padding: 3px 12px 3px 8px;
+        border-top-right-radius: 14px;
+        background-color: abs.$status_bg;
+        @include abs.fontDesigner($weight: 400, $color: abs.$black);
+      }
+
+      &-title-row {
+        @include abs.displayFlex();
+      }
+    }
+  }
+}

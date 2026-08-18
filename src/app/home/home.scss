@@ -1,5 +1,6 @@
 @use '../../styles/abstracts/' as abs;
 
 main {
+  background-color: abs.$primary_purple;
   @include abs.displayFlex($direction: column, $gap: 90px);
 }
