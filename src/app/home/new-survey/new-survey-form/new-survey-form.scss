@@ -1,0 +1,45 @@
+@use './../../../../styles/abstracts/' as abs;
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: none;
+}
+
+.survey-basics-section {
+  @include abs.displayFlex($direction: column, $align: flex-start, $gap: 8px);
+
+  .form-field {
+    @include abs.displayFlex($direction: column, $align: flex-start, $gap: 4px);
+  }
+}
+
+label {
+  @include abs.fontDesigner($size: 18px, $weight: 700, $height: 100%, $color: abs.$formWhite);
+}
+
+.input-with-icon {
+  @include abs.displayFlex($justify: flex-start, $gap: 8px);
+
+  input {
+    height: 37px;
+    border-radius: 5px;
+    border-top-right-radius: 20px;
+    padding: 7px 13px;
+    background-color: abs.$formWhite;
+    border: none;
+  }
+
+  button {
+    background: none;
+    border: none;
+  }
+}
+
+.field-group {
+  @include abs.displayFlex($justify: flex-start, $align: flex-start, $gap: 8px);
+
+  .choose-category {
+    @include abs.displayFlex($direction: column, $align: flex-start);
+  }
+}

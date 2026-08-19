@@ -1,0 +1,58 @@
+<form>
+  <fieldset formGroupName="surveyBasics" class="survey-basics-section">
+    <!-- Survey Name -->
+    <div class="form-field">
+      <label for="surveyName">Survey Name</label>
+      <div class="input-with-icon">
+        <input id="surveyName" type="text" formControlName="surveyName" aria-required="true" />
+        <button
+          type="button"
+          class="icon-placeholder"
+          (click)="clearField('surveyName')"
+          aria-label="Survey Name löschen"
+        >
+          <img src="/img/delete.png" alt="Delete_Icon" />
+        </button>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <!-- Set End Date -->
+      <div class="form-field">
+        <label for="setEndDate">Set End Date</label>
+        <div class="input-with-icon">
+          <input
+            id="setEndDate"
+            type="text"
+            formControlName="setEndDate"
+            placeholder="TT.MM.JJJJ"
+            aria-describedby="setEndDateHint"
+          />
+          <button
+            type="button"
+            class="icon-placeholder"
+            (click)="clearField('setEndDate')"
+            aria-label="Set End Date löschen"
+          >
+            <img src="/img/delete.png" alt="Delete_Icon" />
+          </button>
+        </div>
+        <span id="setEndDateHint" class="visually-hidden">Format Tag Punkt Monat Punkt Jahr</span>
+      </div>
+
+      <!-- Choose Category -->
+      <div class="form-field choose-category">
+        <label for="chooseCategory">Choose Category</label>
+        <select id="chooseCategory" formControlName="chooseCategory" aria-required="true">
+          <option value="" disabled selected>Bitte wählen</option>
+          @for (category of categories; track $index) {
+            <option>
+              {{ category }}
+            </option>
+          }
+        </select>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
